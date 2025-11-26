@@ -5,7 +5,7 @@ import Faq from "./components/Faq/Faq";
 import Footer from "./components/Footer/Footer";
 import LandingPage from "./pages/LandingPage"; 
 import CreatePage from "./pages/CreatePage";
-import ChatBotPage from "./pages/ChatbotPage";
+import ChatBotPage from "./pages/ChatBotPage";
 import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
 
