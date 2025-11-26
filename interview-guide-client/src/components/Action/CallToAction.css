@@ -1,0 +1,39 @@
+@reference "../../App.css";
+
+/* Outer spacing */
+.cta-section {
+  @apply py-12 md:py-16;   
+}
+
+/* Container wrapper */
+.cta-container {
+  @apply container mx-auto px-4 md:px-8;  
+}
+
+/* Main CTA box */
+.cta-box {
+  @apply bg-secondary rounded-2xl
+         p-6 md:p-10 lg:p-12  
+         text-center flex flex-col items-center;
+}
+
+/* Title */
+.cta-title {
+  @apply text-2xl md:text-3xl font-bold text-primary mb-3 md:mb-4;
+}
+
+/* Paragraph */
+.cta-text {
+  @apply text-sm md:text-base text-background
+         max-w-md md:max-w-2xl 
+         mb-6 md:mb-8 leading-relaxed;
+}
+
+/* Button */
+.cta-button {
+  @apply bg-primary text-white font-semibold 
+         py-2.5 px-6 md:py-3 md:px-8 
+         text-sm md:text-base
+         rounded-lg cursor-pointer
+         transition-transform transform hover:scale-105;
+}

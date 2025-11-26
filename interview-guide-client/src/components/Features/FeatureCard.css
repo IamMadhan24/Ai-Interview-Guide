@@ -1,0 +1,28 @@
+@reference "../../App.css";
+
+/* Card container */
+.feature-card {
+  @apply bg-white/80 backdrop-blur-sm 
+         p-6 md:p-8     
+         rounded-2xl shadow-lg 
+         flex flex-col;
+}
+
+/* Icon wrapper */
+.feature-icon {
+  @apply bg-primary text-background
+         w-10 h-10 md:w-12 md:h-12   
+         rounded-full flex items-center justify-center 
+         mb-3 md:mb-4;
+}
+
+/* Title – responsive */
+.feature-title {
+  @apply text-lg md:text-xl   
+         font-semibold mb-2 text-primary;
+}
+
+/* Description */
+.feature-text {
+  @apply text-sm md:text-base text-gray-600 leading-relaxed;
+}

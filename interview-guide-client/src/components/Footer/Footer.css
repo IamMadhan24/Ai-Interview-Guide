@@ -1,0 +1,52 @@
+@reference "../../App.css";
+
+/* Background */
+.footer-bg {
+  @apply bg-primary;
+}
+
+/* Main container */
+.footer-container {
+  @apply container mx-auto px-8 py-12;
+}
+
+/* Grid layout */
+.footer-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-8 mb-8;
+}
+
+/* Brand Column */
+.footer-brand {
+  @apply flex items-center mb-2;
+}
+
+.footer-logo-circle {
+  @apply bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold text-lg mr-2;
+}
+
+.footer-logo-text {
+  @apply text-xl font-bold text-secondary;
+}
+
+.footer-desc {
+  @apply text-background text-sm;
+}
+
+/* Headings */
+.footer-heading {
+  @apply font-semibold mb-3 text-background;
+}
+
+/* Lists */
+.footer-list {
+  @apply space-y-2 text-secondary;
+}
+
+.footer-link {
+  @apply hover:text-background cursor-pointer;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  @apply border-t border-background pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-background;
+}

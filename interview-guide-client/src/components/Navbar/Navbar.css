@@ -1,0 +1,69 @@
+@reference "../../App.css";
+
+/* Header */
+.nav-container {
+  @apply sticky top-0 
+  bg-background/80 backdrop-blur-sm border-b border-gray-300/80 
+  z-1;
+}
+
+/* Layout */
+.nav-content {
+  @apply container mx-auto flex justify-between items-center 
+         p-3 md:p-4 px-4 md:px-8;   
+}
+
+/* Logo */
+.logo {
+  @apply flex items-center text-lg md:text-xl font-bold tracking-wide text-primary no-underline;
+}
+
+.logo-circle {
+  @apply bg-primary text-white 
+         w-7 h-7 md:w-9 md:h-9      
+         rounded-full flex items-center justify-center 
+         font-bold text-sm md:text-base 
+         mr-2;
+}
+
+/* Desktop Links */
+.nav-links {
+  @apply hidden md:flex items-center space-x-6;
+}
+
+.nav-link {
+  @apply text-secondary hover:text-primary transition-colors no-underline;
+}
+
+.nav-active {
+  @apply font-semibold text-primary;
+}
+
+/* Button */
+.chat-btn {
+  @apply bg-primary text-white font-semibold 
+         py-2 px-4 md:px-6         
+         text-sm md:text-base      
+         rounded-lg hover:bg-secondary transition-colors
+         cursor-pointer;
+}
+
+/* Hide chat button on mobile */
+.chat-wrapper {
+  @apply hidden md:block;
+}
+
+/* Hamburger button */
+.hamburger-btn {
+  @apply md:hidden text-primary;
+}
+
+/* Mobile menu container */
+.mobile-menu {
+  @apply md:hidden flex flex-col bg-primary px-6 py-4 border-t border-gray-300;
+}
+
+/* Mobile menu links */
+.mobile-link {
+  @apply py-2 text-white font-medium hover:text-secondary;
+}

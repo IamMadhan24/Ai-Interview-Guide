@@ -1,0 +1,41 @@
+@reference "../../App.css";
+
+/* Outer container */
+.hero-container {
+  @apply container mx-auto flex flex-col items-center justify-center text-center
+         px-4                
+         pt-20 pb-16         
+         md:pt-28 md:pb-20   
+         lg:pt-40 lg:pb-40;  
+}
+
+/* Title */
+.hero-title {
+  @apply text-3xl
+         md:text-5xl
+         lg:text-6xl
+         font-bold text-primary 
+         leading-snug 
+         mb-4;
+}
+
+/* Subtitle */
+.hero-subtitle {
+  @apply text-base md:text-lg text-gray-600
+         max-w-sm md:max-w-2xl   
+         leading-relaxed         
+         mb-8;                   
+}
+
+/* Button */
+.hero-btn {
+  @apply bg-primary text-white font-semibold
+         py-3 px-6              
+         md:py-3 md:px-8
+         text-sm md:text-base
+         rounded-lg 
+         hover:bg-secondary 
+         transition-transform 
+         transform hover:scale-105
+         cursor-pointer;
+}

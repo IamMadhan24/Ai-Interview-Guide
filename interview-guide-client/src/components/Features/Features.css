@@ -1,0 +1,16 @@
+@reference "../../App.css";
+
+/* Container */
+.features-container {
+  @apply container mx-auto py-16 px-8;
+}
+
+/* Title */
+.features-title {
+  @apply text-2xl md:text-4xl font-bold text-center text-primary mb-12;
+}
+
+/* Grid layout */
+.features-grid {
+  @apply grid md:grid-cols-3 gap-8;
+}
