@@ -81,7 +81,7 @@ const EvaluateAnswerSection = () => {
 
         {error && <p className="error-text">{error}</p>}
 
-        <button className="btn-primary form-group">
+        <button className="btn-primary form-group cursor-pointer">
           {loading ? "Evaluating..." : "Evaluate Answer"}
         </button>
       </form>
@@ -117,7 +117,7 @@ const EvaluateAnswerSection = () => {
           </div>
 
           <button
-            className="btn-secondary absolute-top-right"
+            className="btn-secondary absolute-top-right cursor-pointer"
             onClick={downloadPdf}
           >
             Download Report

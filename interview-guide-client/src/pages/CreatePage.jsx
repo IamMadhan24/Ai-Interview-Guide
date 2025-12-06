@@ -7,6 +7,7 @@ import EvaluateAnswerSection from "../components/Create/EvaluateAnswerSection";
 import ResumeAnalysisSection from "../components/Create/ResumeAnalysisSection";
 
 import "../components/Create/CreateSections.css";
+import Popup from "./Popup";
 
 const CreatePage = () => {
   const location = useLocation();
@@ -28,6 +29,7 @@ const CreatePage = () => {
 
   return (
     <div className="container mx-auto py-8 px-4 md:px-8">
+      <Popup />
 
       {/* Tabs */}
       <nav className="tabs">

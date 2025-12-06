@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import ChatMessage from "../components/ChatBot/ChatMessage";
 import ChatInput from "../components/ChatBot/ChatInput";
 import "./ChatBot.css";
+import Popup from "./Popup";
 
 const ChatBotPage = () => {
   const [messages, setMessages] = useState([
@@ -45,6 +46,7 @@ const ChatBotPage = () => {
 
   return (
     <div className="chatbot-wrapper">
+      <Popup />
 
       <h2 className="chat-title">AI Chat Bot</h2>
 

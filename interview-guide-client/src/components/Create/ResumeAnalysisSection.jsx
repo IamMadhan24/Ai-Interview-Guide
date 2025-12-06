@@ -100,7 +100,7 @@ const ResumeAnalysisSection = () => {
 
         {error && <p className="error-text">{error}</p>}
 
-        <button className="btn-primary form-group" disabled={loading}>
+        <button className="btn-primary form-group cursor-pointer" disabled={loading}>
           {loading ? "Analyzing..." : "Analyze Resume"}
         </button>
       </form>
@@ -147,7 +147,7 @@ const ResumeAnalysisSection = () => {
           </div>
 
           <button
-            className="btn-secondary absolute-top-right"
+            className="btn-secondary absolute-top-right cursor-pointer"
             onClick={downloadPdf}
           >
             Download Report

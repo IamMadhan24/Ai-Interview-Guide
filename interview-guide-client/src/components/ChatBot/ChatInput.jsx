@@ -18,7 +18,7 @@ const ChatInput = ({ onSend }) => {
         value={msg}
         onChange={(e) => setMsg(e.target.value)}
       />
-      <button type="submit">
+      <button className="cursor-pointer" type="submit">
         <Send size={20} />
       </button>
     </form>

@@ -80,7 +80,7 @@ const GetAnswersSection = () => {
 
         {error && <p className="error-text">{error}</p>}
 
-        <button className="btn-primary form-group" disabled={loading}>
+        <button className="btn-primary form-group cursor-pointer" disabled={loading}>
           {loading ? "Generating..." : "Get AI Answer"}
         </button>
       </form>
@@ -91,7 +91,7 @@ const GetAnswersSection = () => {
           <p className="result-text whitespace-pre-line">{answer}</p>
 
           <button
-            className="btn-secondary absolute-top-right"
+            className="btn-secondary absolute-top-right cursor-pointer"
             onClick={downloadPdf}
           >
             Download Report
