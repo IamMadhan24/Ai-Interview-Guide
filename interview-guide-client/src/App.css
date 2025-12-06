@@ -1,12 +1,9 @@
 @import "tailwindcss";
-@reference "./index.css";
 
 @theme {
-  --color-primary: var(--primary);
-   --color-secondary: var(--secondary);
-  --color-background: var(--background);
+  --color-primary: #374151;
+  --color-secondary: #818CF8;
+  --color-background: #EEF2FF;
 }
 
-.app-wrapper {
-  @apply bg-background;
-}
+

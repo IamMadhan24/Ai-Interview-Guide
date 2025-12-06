@@ -45,8 +45,8 @@ const GetQuestionsSection = () => {
 
     const blob = await res.blob();
     const url = URL.createObjectURL(blob);
-
     const a = document.createElement("a");
+    
     a.href = url;
     a.download = "questions_report.pdf";
     a.click();
@@ -109,9 +109,9 @@ const GetQuestionsSection = () => {
             Questions — {response.topic} ({response.difficulty})
           </h3>
 
-          <ul className="list">
+          <ul>
             {response.questions.map((q, i) => (
-              <li key={i} className="list-item">{q}</li>
+              <li key={i} >{q}</li>
             ))}
           </ul>
 

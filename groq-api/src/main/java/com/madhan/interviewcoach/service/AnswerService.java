@@ -7,11 +7,11 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class InterviewService {
+public class AnswerService {
 
     private final GroqClient groqClient;
 
-    public InterviewService(GroqClient groqClient) {
+    public AnswerService(GroqClient groqClient) {
         this.groqClient = groqClient;
     }
 

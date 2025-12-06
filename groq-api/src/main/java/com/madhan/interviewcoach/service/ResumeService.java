@@ -70,7 +70,7 @@ public class ResumeService {
         response.setStrengths(getSafeList(root, "strengths"));
         response.setWeaknesses(getSafeList(root, "weaknesses"));
 
-        // ✔️ FIX: Parse suggested improvements consistently
+        // FIX: Parse suggested improvements consistently
         List<String> improvementsList = getSafeList(root, "suggestedImprovements");
         if (improvementsList.isEmpty()) {
             improvementsList = getSafeList(root, "suggested_improvements");

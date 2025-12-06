@@ -38,6 +38,22 @@ const EvaluateAnswerSection = () => {
     }
   }
 
+    async function downloadPdf() {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/report/evaluation`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(result),
+    });
+
+    const blob = await res.blob();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "evaluate_report.pdf";
+    a.click();
+  }
+
   return (
     <section className="section-card">
       <form onSubmit={handleSubmit}>
@@ -71,7 +87,7 @@ const EvaluateAnswerSection = () => {
       </form>
 
       {result && (
-        <div className="result-card">
+        <div className="result-card relative">
           <h3 className="result-title">Evaluation Result</h3>
 
           <p className="result-text">
@@ -99,6 +115,13 @@ const EvaluateAnswerSection = () => {
             <strong>Suggested Revision</strong>
             <p className="result-text">{result.suggestedRevision}</p>
           </div>
+
+          <button
+            className="btn-secondary absolute-top-right"
+            onClick={downloadPdf}
+          >
+            Download Report
+          </button>
         </div>
       )}
     </section>

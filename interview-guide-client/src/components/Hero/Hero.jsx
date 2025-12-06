@@ -11,8 +11,7 @@ const Hero = () => {
       </h1>
 
       <p className="hero-subtitle">
-        Get AI-generated interview questions, answer suggestions, real-time
-        evaluation, resume analysis, and full mock interview simulations.
+        Get AI-powered interview questions, answer suggestions, answer evaluation, resume analysis, and an interactive chatbot.
       </p>
 
       <button

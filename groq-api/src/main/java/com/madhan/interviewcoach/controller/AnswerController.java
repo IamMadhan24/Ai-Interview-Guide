@@ -1,6 +1,6 @@
 package com.madhan.interviewcoach.controller;
 
-import com.madhan.interviewcoach.service.InterviewService;
+import com.madhan.interviewcoach.service.AnswerService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,12 +9,12 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/v1/interview")
 @CrossOrigin
-public class InterviewController {
+public class AnswerController {
 
-    private final InterviewService interviewService;
+    private final AnswerService answerService;
 
-    public InterviewController(InterviewService interviewService) {
-        this.interviewService = interviewService;
+    public AnswerController(AnswerService answerService) {
+        this.answerService = answerService;
     }
 
     @PostMapping("/answer")
@@ -23,7 +23,7 @@ public class InterviewController {
             String question = body.get("question");
             String role = body.getOrDefault("role", "candidate");
 
-            String answer = interviewService.generateAnswer(question, role);
+            String answer = answerService.generateAnswer(question, role);
 
             return ResponseEntity.ok(answer);
 

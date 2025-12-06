@@ -11,11 +11,10 @@ import "./App.css";
 
 const App = () => {
   return (
-    <div className="app-wrapper">
+    <div className="bg-[#EEF2FF]">
       <ScrollToTop />
       <Navbar />
       
-      <main className="grow">
         <Routes>
           <Route path="/" element={<LandingPage />} />
 
@@ -28,7 +27,6 @@ const App = () => {
           <Route path="/features" element={<Features />} />
           <Route path="/faq" element={<Faq />} />
         </Routes>
-      </main>
 
       <Footer />
     </div>

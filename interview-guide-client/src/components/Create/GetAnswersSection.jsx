@@ -3,7 +3,7 @@ import "./CreateSections.css";
 
 const GetAnswersSection = () => {
   const [question, setQuestion] = useState("");
-  const [role, setRole] = useState("software engineer");
+  const [role, setRole] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [answer, setAnswer] = useState("");
@@ -31,6 +31,27 @@ const GetAnswersSection = () => {
       setLoading(false);
     }
   }
+
+    async function downloadPdf() {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/report/answer`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          question: question,
+          answer: answer,
+          role: role,
+        }),
+      });
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+
+      a.href = url;
+      a.download = "answer_report.pdf";
+      a.click();
+    }
+
 
   return (
     <section className="section-card">
@@ -65,9 +86,16 @@ const GetAnswersSection = () => {
       </form>
 
       {answer && (
-        <div className="result-card">
+        <div className="result-card relative">
           <h3 className="result-title">AI Suggested Answer</h3>
           <p className="result-text whitespace-pre-line">{answer}</p>
+
+          <button
+            className="btn-secondary absolute-top-right"
+            onClick={downloadPdf}
+          >
+            Download Report
+          </button>
         </div>
       )}
     </section>
